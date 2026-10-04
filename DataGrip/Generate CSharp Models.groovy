@@ -3,13 +3,11 @@ import com.intellij.database.util.Case
 import com.intellij.database.util.DasUtil
 
 /*
- * Available context bindings:
- *   SELECTION   Iterable<DasObject>
- *   PROJECT     project
- *   FILES       files helper
+ * Generates simple C# model classes from selected database tables.
+ * Intended to be used with JetBrains DataGrip.
  */
 
-namespaceName = "Models"
+namespaceName = ".Models"
 
 typeMapping = [
   (~/(?i)tinyint\(1\)|boolean|bool/)        : "bool",
